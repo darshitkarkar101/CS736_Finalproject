@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <!-- https://fonts.google.com/specimen/Rajdhani?category=Sans+Serif&sidebar.open=true&selection.family=Rajdhani:wght@300;400;500;600;700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- https://mdbootstrap.com/docs/jquery/forms/radio-button/ -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/statistical.css">
+
+    <title>Information Visualization</title>
+</head>
+
+<body>
+   
+
+    <!-- <section id='scrolly-side'> -->
+        <div class='scrolly'>
+           
+            <div class='sticky'>
+              
+                <div id="display-3" class="display">
+                    <canvas id="scrolly-main-vis" class="main-vis"></canvas>
+                </div>
+            </div>
+        </div>
+       
+    <!-- </section> -->
+
+
+    <div id="main">
+       
+        <svg id="realistic-main-vis" class="main-vis"></svg>
+        <svg id="statistical-main-vis" class="main-vis" style="visibility: hidden; z-index: -2"></svg>
+
+        <div id="realistic-main-display" class="main-display realistic"></div>
+        <div id="statistical-main-display" class="main-display statistical" style="display: none"></div>
+
+        <!-- Realistic / Statistical view switches -->
+        <div id="main-vis-switch">
+            <div class="custom-control-top-right custom-radio">
+                <input type="radio" class="custom-control-input" id="radioStatistical" name="mainVisSwitch"
+                    value="statistical" checked>
+                <label class="custom-control-label" for="radioStatistical">Statistical View</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/d3-scale-radial.js"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://unpkg.com/enter-view@1.0.0/enter-view.min.js"></script>
+    <script src="https://unpkg.com/stickyfilljs@2.0.5/dist/stickyfill.js"></script>
+
+    <script src="js/"></script>
+    <script>
+        const _$ = $;
+        _$.getScript('https://d3js.org/d3.v5.min.js', function () {
+            _$('#statistical-main-display').load('statistical-mode.html', function () {
+                _$.getScript('js/statistical.js');
+            });
+            
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

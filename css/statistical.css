@@ -1,0 +1,127 @@
+
+.main-display.statistical {
+    padding: 40px 40px 40px 40px;
+    pointer-events: none;
+}
+
+.main-display.statistical * {
+    pointer-events: all;
+}
+
+#statistical-main-vis {
+    
+}
+
+.left-panel.statistical {
+    width: 180px;
+    /* pointer-events: all; */
+}
+
+.left-panel.statistical .options{
+    margin-top: 32px;
+}
+
+.custom-select{
+    border-radius:10px;
+    width: 180px;
+    font-size: 13px;
+}
+
+.stat-title{
+    width: 600px;
+}
+
+.stat-title h1{
+    padding-top: 10px;
+}
+
+#sta_refineByYear{
+    position: relative;
+    font-family: Metropolis_SemiBold;
+    font-size: 23px;
+    color:white;
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+    padding:0 0 0 10px;
+    background:url('../data/arrow.png') no-repeat;
+    background-position:100% center;
+    background-size: 20%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+}
+
+
+.options{
+    opacity: 0.8;
+    width:200px;
+}
+
+/* Legend */
+.legend {
+    opacity: 0.85;
+}
+
+.legend .s_Civil { background-color: #A92D38;}
+.legend .s_Commercial { background-color: #FC4A34; }
+.legend .s_Government { background-color: #CE5C30; }
+.legend .s_Millitary { background-color: #D9883D; }
+.legend .s_Multi-purpose { background-color: #FBD9B2; }
+
+.legend .s_China { background-color: #E12200;}
+.legend .s_Russia { background-color: #9B56BB; }
+.legend .s_UK { background-color: #0079B8; }
+.legend .s_USA { background-color: #62A420; }
+.legend .s_Others { background-color: #FAC400; }
+
+/* D3 */
+.regular-ellipse {
+    stroke: rgba(255, 255, 255, 0.7);
+    /* opacity: 0.4; */
+    stroke-width: 1;
+    fill: none;
+}
+
+/* font for all texts */
+h1{
+    font-size:26px;
+}
+
+h2{
+    font-size:18px;
+}
+
+h3 {
+    font-size:13px;
+}
+
+.custom-control-label{
+    padding-top: 2px;
+    font-size: 14px;
+}
+
+/* .arc{
+    pointer-events: all;
+} */
+
+.g_main {
+    height: 800px;
+    width: 800px;
+    pointer-events: all;
+  }
+
+.bar_label{
+    font-family: Metropolis, sans-serif;
+    font-size: 12px;
+}
+
+.axis text{
+    font-family: Metropolis, sans-serif;
+    font-size: 7px;
+}
+
+/* */
+.g_caption {
+    pointer-events: none;
+}

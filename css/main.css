@@ -1,0 +1,195 @@
+
+@font-face {
+    font-family: Metropolis_Light;
+    src: url("../font/Metropolis-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url("../font/Metropolis-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis_Medium;
+    src: url("../font/Metropolis-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis_SemiBold;
+    src: url("../font/Metropolis-SemiBold.otf") format("opentype");
+}
+
+#topTitle {
+    font-family: Metropolis_Medium, sans-serif;
+}
+
+body {
+    font-family: Metropolis_Light, sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+body::after {
+    content: "";
+    background-image:url('../background.jpeg');
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -100;
+}
+
+h3 {
+    font-family: Metropolis_Medium, sans-serif;
+}
+
+#main-title {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: 40px;
+}
+
+/* scrolly telling */
+#scroll {
+    position: relative;
+}
+
+.scroll__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.scroll__graphic.is-fixed {
+    position: fixed;
+}
+
+.scroll__graphic.is-bottom {
+    bottom: 0;
+    top: auto;
+}
+
+/* position, padding, margin */
+#main {
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+#main-vis-switch{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-display {
+    display: grid;
+    padding: 40px;
+}
+
+.left-panel {
+    grid-column: span 2;
+    grid-row: 1;
+}
+
+.left-panel h3 {
+    margin-top: 20px;
+}
+
+.left-panel > section {
+    margin: 40px 0;
+}
+
+.right-panel {
+    grid-column: span 1;
+    grid-row: 1;
+}
+
+.right-panel > section {
+    margin: 40px 0;
+    float: right;
+}
+
+.main-vis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+    min-height: 400px;
+    z-index: -1;
+}
+
+
+.legend>li {
+    padding-bottom: 4px;
+}
+
+/* D3 */
+.axis text {
+    fill: #fff;
+}
+
+.axis path,
+.axis line {
+    stroke: #fff;
+}
+
+/* font for all texts */
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+.custom-control-label, li{
+    font-size: 14px;
+}
+
+text.label {
+    text-anchor: middle;
+    font-size: 12px;
+    fill: #fff;
+    font-family: Metropolis, sans-serif;
+}
+
+g text {
+    font-size: 10px;
+    font-family: Metropolis, sans-serif;
+    fill: #fff;
+} 
+
+/* layout */
+.custom-control-top-right {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+#main-vis-switch label {
+    font-size: 18px; /* no effect */
+    padding-top: 1px;
+}
+
+.no-display{
+    display: none;
+}
+
